@@ -1,0 +1,3 @@
+itemadapter==0.9.0
+moviepy==1.0.3
+scrapy==2.11.2
