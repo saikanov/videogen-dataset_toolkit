@@ -37,4 +37,3 @@ python split.py --video_dir=/path/to/video_dir --output_dir=/path/to/output_dir 
 ## Contact
 
 - saikanov - [Discord](discordapp/user/693444397055868948)
-- Project Link: [https://github.com/yourusername/projectname](https://github.com/yourusername/projectname)
