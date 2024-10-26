@@ -35,7 +35,7 @@ scrapy crawl sakugaTag -a tag="jojo's_bizarre_adventure_series" -a total_pages=2
 ### Scraping by Pools
 Pool ID can be found in the page URL (e.g., "https://www.sakugabooru.com/pool/show/142")
 ```bash
-scrapy crawl sakugaPool -a PoolID=142 -a total_pages=1
+scrapy crawl sakugaPools -a PoolID=142 -a total_pages=1
 ```
 
 ### Video Preprocessing
