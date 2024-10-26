@@ -2,7 +2,7 @@ import scrapy
 from scrapy import Request
 
 class SakugaSpider(scrapy.Spider):
-    name = "sakugaPools"
+    name = "sakugaPool"
 
     def start_requests(self):
         request = []
