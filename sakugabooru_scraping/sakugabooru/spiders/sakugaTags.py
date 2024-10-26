@@ -10,7 +10,7 @@ class SakugaSpider(scrapy.Spider):
     def start_requests(self):
         request = []
         for i in range(int(self.total_pages)):
-            request.append(Request(f"https://www.sakugabooru.com/post?page={i+1}&tags={urllib.parse.quote(self.tag.replace(" ","_"))}"))
+            request.append(Request(f"https://www.sakugabooru.com/post?page={i+1}&tags={urllib.parse.quote(self.tag.replace(' ','_'))}"))
         return request
     
     def parse(self, response):
