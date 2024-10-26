@@ -29,13 +29,13 @@ There are 2 ways to scrape SakugaBooru: using [Tags](https://www.sakugabooru.com
 
 ### Scraping by Tags
 ```bash
-scrapy crawl sakugaTags -a tag="jojo's_bizarre_adventure_series" -a total_pages=27
+scrapy crawl sakugaTag -a tag="jojo's_bizarre_adventure_series" -a total_pages=27
 ```
 
 ### Scraping by Pools
 Pool ID can be found in the page URL (e.g., "https://www.sakugabooru.com/pool/show/142")
 ```bash
-scrapy crawl sakugaPools -a PoolID=142 -a total_pages=1
+scrapy crawl sakugaPool -a PoolID=142 -a total_pages=1
 ```
 
 ### Video Preprocessing
