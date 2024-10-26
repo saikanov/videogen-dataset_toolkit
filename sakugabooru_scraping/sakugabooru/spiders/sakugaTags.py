@@ -1,13 +1,17 @@
 # sakugabooru/spiders/sakuga_spider.py
 import scrapy
+from scrapy import Request
+import urllib.parse
+
 
 class SakugaSpider(scrapy.Spider):
     name = "sakugaTag"
-    tags = r"jojo%27s_bizarre_adventure_series"
-    total_pages = 27
-    start_urls = []
-    for i in range(total_pages):
-        start_urls.append(f"https://www.sakugabooru.com/post?page={i+1}&tags={tags}")
+
+    def start_requests(self):
+        request = []
+        for i in range(int(self.total_pages)):
+            request.append(Request(f"https://www.sakugabooru.com/post?page={i+1}&tags={urllib.parse.quote(self.tag)}"))
+        return request
     
     def parse(self, response):
         video_links = response.css(".directlink.smallimg::attr(href)").getall()
